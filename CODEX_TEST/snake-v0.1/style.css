@@ -1,0 +1,117 @@
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #183153;
+  --accent: #0f8f6f;
+  --accent-2: #0c6a53;
+  --danger: #c73939;
+  --line: #dbe4ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: radial-gradient(circle at top, #ffffff, var(--bg) 70%);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.app {
+  width: min(92vw, 520px);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(24, 49, 83, 0.08);
+  padding: 18px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+.panel {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.panel p {
+  margin: 0;
+  font-weight: 600;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f8fbff;
+}
+
+.actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-2);
+}
+
+#pauseBtn {
+  background: #5a6b7d;
+}
+
+#restartBtn {
+  background: var(--danger);
+}
+
+.tips {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #4d627b;
+}
+
+.tips p {
+  margin: 4px 0;
+}
+
+.mobile-pad {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 210px;
+}
+
+.mobile-pad button {
+  min-height: 42px;
+  padding: 0;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .mobile-pad {
+    display: none;
+  }
+}
